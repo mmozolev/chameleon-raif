@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../fields/xsd/element_rules.xsd">
+    <Page name="Ипотека на вторичное жилье">
+        <Button name="Оставить заявку" locator="//div[@class='b-intro__block-buttons']//a[text()='Оставить заявку']"
+                isLoaded="true"/>
+    </Page>
+    <Page name="Заполнение заявки на ипотека">
+        <StaticText name="Заполнение заявки" locator="//div[text()='Заполнение заявки']"/>
+        <TextInput name="E-mail"/>
+        <TextInput name="Имя"/>
+        <TextInput name="Телефон"/>
+        <TextInput name="Фамилия"/>
+        <TextInput name="Отчество"/>
+        <TextInput name="Дата рождения" customType="com.aplana.chameleon.element.custom.DataInput"/>
+        <TextInput name="Серия и номер паспорта"/>
+        <TextInput name="Код подразделения" customType="com.aplana.chameleon.element.custom.DynamicTextInput"/>
+        <TextInput name="Дата выдачи" customType="com.aplana.chameleon.element.custom.DataInput"/>
+        <TextInput name="Кем выдан"/>
+        <TextInput name="Адрес регистрации" customType="com.aplana.chameleon.element.custom.DynamicTextInput"/>
+        <TextInput name="Ежемесячный доход"/>
+        <ComboBox name="Могу подтвердить с помощью"
+                  locator="//div[text()='Могу подтвердить с помощью']/..//div[@placeholder]"/>
+        <TextInput name="Город приобретаемой недвижимости" customType="com.aplana.chameleon.element.custom.DynamicTextInput"/>
+        <Button name="Продолжить" locator="//button[text()='Продолжить']"/>
+    </Page>
+    <Page name="Главная страница">
+        <Collection name="Меню" locator="//ul[@class='main-menu']//li">
+            <Button name="Наименование" locator="."/>
+        </Collection>
+        <Collection name="Подменю" locator="//a[@class='menu-link main-menu__link']">
+            <Button name="Наименование" locator="."/>
+        </Collection>
+    </Page>
+</Pages>
